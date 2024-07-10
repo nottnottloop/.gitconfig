@@ -1,0 +1,28 @@
+[user]
+	name = nottnottloop
+	email = 6772127+nottnottloop@users.noreply.github.com
+[alias]
+	st = status
+	rv = remote -v
+	cm = commit -m
+	cma = commit -am
+	a = add .
+	cp = cherry-pick
+	cpn = cherry-pick -n
+	co = commit
+	ch = checkout
+	br = branch
+	sw = switch
+	ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	last = log -1 HEAD --stat
+	gl = config --global -l
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	longpaths = true
+	autocrlf = input
+[init]
+	defaultBranch = main
